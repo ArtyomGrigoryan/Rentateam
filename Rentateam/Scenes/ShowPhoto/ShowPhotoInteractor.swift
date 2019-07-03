@@ -14,13 +14,11 @@ protocol ShowPhotoBusinessLogic {
 
 protocol ShowPhotoDataStore {
     var photo: Hits? { get set }
-    //var photo: Photos? { get set }
 }
 
 class ShowPhotoInteractor: ShowPhotoBusinessLogic, ShowPhotoDataStore {
     
     var photo: Hits?
-    //var photo: Photos?
     var presenter: ShowPhotoPresentationLogic?
   
     func makeRequest(request: ShowPhoto.Model.Request.RequestType) {

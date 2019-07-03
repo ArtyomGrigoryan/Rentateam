@@ -21,6 +21,7 @@ class ShowPhotoViewController: UIViewController, ShowPhotoDisplayLogic {
 
     // MARK: - @IBOutlets
     
+    @IBOutlet weak var downloadDate: UILabel!
     @IBOutlet weak var photoImageView: WebImageView!
     
     // MARK: - Object lifecycle
@@ -55,20 +56,9 @@ class ShowPhotoViewController: UIViewController, ShowPhotoDisplayLogic {
     func displayData(viewModel: ShowPhoto.Model.ViewModel.ViewModelData) {
         switch viewModel {
         case .displayPhoto(let photo):
-            print(photo)
-            guard let url = URL(string: photo) else { return }
-            
-            URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
-                DispatchQueue.main.async {
-                    if let self = self, let data = data {
-                        self.photoImageView.image = UIImage(data: data)
-                    }
-                }
-            }.resume()
-        
-            //photoImageView.set(imageURL: photo)
-
+            photoImageView.set(imageURL: photo) { [weak self] (date) in
+                self?.downloadDate.text = date!
+            }
         }
     }
-  
 }

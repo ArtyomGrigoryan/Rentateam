@@ -28,7 +28,8 @@ class NetworkService: Networking {
                     completion(nil, error)
                 }
             }
+        } else {
+            completion(nil, nil)
         }
-        completion(nil, nil)
     }
 }
