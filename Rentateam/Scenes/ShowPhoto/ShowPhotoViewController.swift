@@ -62,32 +62,11 @@ class ShowPhotoViewController: UIViewController, ShowPhotoDisplayLogic {
             URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
                 DispatchQueue.main.async {
                     if let self = self, let data = data {
-                        print("AZAZZAZAZ")
                         self.photoImageView.image = UIImage(data: data)
                     }
                 }
             }.resume()
-            
-            //photoImageView.set(imageURL: photo)
-//                        guard let url1 = URL(string: photo) else { return }
-//
-//                        let name = url1.lastPathComponent
-//                        //let result = name.substring(from: name.index(name.startIndex, offsetBy: 0))
-//
-//                        //поищем такой файл в нашем менеджере
-//                        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
-//                        let url = NSURL(fileURLWithPath: path)
-//
-//                        if let pathComponent = url.appendingPathComponent(name) {
-//                            let filePath = pathComponent.path
-//                            let fileManager = FileManager.default
-//
-//                            if fileManager.fileExists(atPath: filePath) {
-//                                photoImageView.image = UIImage(contentsOfFile: filePath)!
-//                            }
-//                        }
-            
-            
+        
             //photoImageView.set(imageURL: photo)
 
         }

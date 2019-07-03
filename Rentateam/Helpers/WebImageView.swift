@@ -41,10 +41,10 @@ class WebImageView: UIImageView {
                     
                     if let httpResponse = response as? HTTPURLResponse, let date = httpResponse.allHeaderFields["Date"] as? String {
                         //print(httpResponse.allHeaderFields)
-                        print(date)
+                        //print(date)
                     } else {
                         //тут буем дергать из нашего файлового менеджера
-                        print("ЖОПА")
+                        //print("uuu")
                     }
                     
                     //print(response!)

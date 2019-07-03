@@ -24,6 +24,7 @@
 		2B8A5E9A22CC7698005ABAE7 /* ShowPhotoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A5E9322CC7698005ABAE7 /* ShowPhotoModels.swift */; };
 		2B8A5E9B22CC7698005ABAE7 /* ShowPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A5E9422CC7698005ABAE7 /* ShowPhotoViewController.swift */; };
 		2B8A5E9C22CC7698005ABAE7 /* ShowPhotoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A5E9522CC7698005ABAE7 /* ShowPhotoInteractor.swift */; };
+		2B8A5EA022CCF156005ABAE7 /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A5E9F22CCF156005ABAE7 /* DateFunctions.swift */; };
 		2BB1DDDA22CBDBCA00554508 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1DDD922CBDBCA00554508 /* Connectivity.swift */; };
 		2BB1DDDC22CBE23C00554508 /* SavedImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1DDDB22CBE23C00554508 /* SavedImages.swift */; };
 		2BB4D5ED22CB209E00CE57F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4D5EC22CB209E00CE57F8 /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		2B8A5E9322CC7698005ABAE7 /* ShowPhotoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhotoModels.swift; sourceTree = "<group>"; };
 		2B8A5E9422CC7698005ABAE7 /* ShowPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhotoViewController.swift; sourceTree = "<group>"; };
 		2B8A5E9522CC7698005ABAE7 /* ShowPhotoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhotoInteractor.swift; sourceTree = "<group>"; };
+		2B8A5E9F22CCF156005ABAE7 /* DateFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFunctions.swift; sourceTree = "<group>"; };
 		2BB1DDD922CBDBCA00554508 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		2BB1DDDB22CBE23C00554508 /* SavedImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedImages.swift; sourceTree = "<group>"; };
 		2BB4D5E922CB209E00CE57F8 /* Rentateam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rentateam.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,8 +92,8 @@
 		2B5CF7EA22CB236B0029A99B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				2B8A5E9E22CC76B3005ABAE7 /* ShowPhoto */,
 				2B5CF7E922CB23550029A99B /* PhotosList */,
+				2B8A5E9E22CC76B3005ABAE7 /* ShowPhoto */,
 				2BB4D5F022CB209E00CE57F8 /* Main.storyboard */,
 			);
 			path = Scenes;
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				2BB1DDD922CBDBCA00554508 /* Connectivity.swift */,
+				2B8A5E9F22CCF156005ABAE7 /* DateFunctions.swift */,
 				2B5CF7FB22CB5D910029A99B /* WebImageView.swift */,
 			);
 			path = Helpers;
@@ -328,6 +331,7 @@
 				2B5CF7E522CB23460029A99B /* PhotosListModels.swift in Sources */,
 				2BB1DDDA22CBDBCA00554508 /* Connectivity.swift in Sources */,
 				2B8A5E9722CC7698005ABAE7 /* ShowPhotoPresenter.swift in Sources */,
+				2B8A5EA022CCF156005ABAE7 /* DateFunctions.swift in Sources */,
 				2B5CF7E222CB23460029A99B /* PhotosListPresenter.swift in Sources */,
 				2B5CF7F022CB264F0029A99B /* API.swift in Sources */,
 				2BB1DDDC22CBE23C00554508 /* SavedImages.swift in Sources */,
