@@ -62,6 +62,7 @@ class ShowPhotoViewController: UIViewController, ShowPhotoDisplayLogic {
             URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
                 DispatchQueue.main.async {
                     if let self = self, let data = data {
+                        print("AZAZZAZAZ")
                         self.photoImageView.image = UIImage(data: data)
                     }
                 }
