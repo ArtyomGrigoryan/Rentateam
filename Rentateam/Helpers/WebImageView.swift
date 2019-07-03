@@ -19,10 +19,12 @@ class WebImageView: UIImageView {
                 if let self = self, let data = data {
                     self.image = UIImage(data: data)
 
-                    let withoutExt = url.deletingPathExtension()
-                    let name = withoutExt.lastPathComponent
+                    //let withoutExt = url.deletingPathExtension()
+                    print("********* \(url)")
+                    let name = url.lastPathComponent
+                    print("||||||||||||| \(name)")
                     let result = name.substring(from: name.index(name.startIndex, offsetBy: 0))
-                
+                    print("----------- \(result)")
                     //поищем такой файл в нашем менеджере
                     let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
                     let url = NSURL(fileURLWithPath: path)

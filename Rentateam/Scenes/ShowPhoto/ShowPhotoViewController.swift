@@ -44,11 +44,7 @@ class ShowPhotoViewController: UIViewController, ShowPhotoDisplayLogic {
         router.viewController     = viewController
         router.dataStore          = interactor
     }
-  
-    // MARK: - Routing
-  
 
-  
     // MARK: - View lifecycle
   
     override func viewDidLoad() {
@@ -59,13 +55,23 @@ class ShowPhotoViewController: UIViewController, ShowPhotoDisplayLogic {
     func displayData(viewModel: ShowPhoto.Model.ViewModel.ViewModelData) {
         switch viewModel {
         case .displayPhoto(let photo):
-            print(photo)
-            let name = photo + ".jpg"
-            print(name)
-            //let path = URL.u
-            photoImageView.image = UIImage(named: name)
-            //photoImageView.image = UIImage(contentsOfFile: photo)
-            print(photoImageView.image)
+            guard let url1 = URL(string: photo) else { return }
+            
+            let name = url1.lastPathComponent
+            let result = name.substring(from: name.index(name.startIndex, offsetBy: 0))
+            
+            //поищем такой файл в нашем менеджере
+            let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+            let url = NSURL(fileURLWithPath: path)
+            
+            if let pathComponent = url.appendingPathComponent(result) {
+                let filePath = pathComponent.path
+                let fileManager = FileManager.default
+
+                if fileManager.fileExists(atPath: filePath) {
+                    photoImageView.image = UIImage(contentsOfFile: filePath)!
+                }
+            }
         }
     }
   
