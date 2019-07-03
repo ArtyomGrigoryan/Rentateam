@@ -143,8 +143,8 @@
 				2B8A5E9422CC7698005ABAE7 /* ShowPhotoViewController.swift */,
 				2B8A5E9522CC7698005ABAE7 /* ShowPhotoInteractor.swift */,
 				2B8A5E9022CC7698005ABAE7 /* ShowPhotoPresenter.swift */,
-				2B8A5E9222CC7698005ABAE7 /* ShowPhotoRouter.swift */,
 				2B8A5E9322CC7698005ABAE7 /* ShowPhotoModels.swift */,
+				2B8A5E9222CC7698005ABAE7 /* ShowPhotoRouter.swift */,
 			);
 			path = ShowPhoto;
 			sourceTree = "<group>";

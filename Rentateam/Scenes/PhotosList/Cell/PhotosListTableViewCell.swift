@@ -9,6 +9,7 @@
 import UIKit
 
 protocol PhotosListCellViewModel {
+    //var date: String? { get }
     var previewURL: String { get }
     var likesCount: String? { get }
     var previewImageViewWidth: String? { get }
@@ -27,8 +28,9 @@ class PhotosListTableViewCell: UITableViewCell {
     }
     
     func set(viewModel: PhotosListCellViewModel) {
-        likesCountLabel.text = viewModel.likesCount!
-        previewImageImageView.set(imageURL: viewModel.previewURL)
+        previewImageImageView.set(imageURL: viewModel.previewURL) { (date) in
+            self.likesCountLabel.text = date!
+        }
         previewImageViewWidthLabel.text = viewModel.previewImageViewWidth!
         previewImageViewHeightLabel.text = viewModel.previewImageViewHeight!
     }

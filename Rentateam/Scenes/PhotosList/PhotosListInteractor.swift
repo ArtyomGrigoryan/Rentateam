@@ -14,17 +14,18 @@ protocol PhotosListBusinessLogic {
 
 protocol PhotosListDataStore {
     var photos: [Hits]? { get }
+    //var photos2: [Photos]? { get }
 }
 
-struct Photos {
-    let hits: Hits
-    let date: String
-}
+//struct Photos {
+//    let hits: Hits
+//    let date: String
+//}
 
 class PhotosListInteractor: PhotosListBusinessLogic, PhotosListDataStore {
 
     var photos: [Hits]?
-    var photos2: [Photos]?
+    //var photos2: [Photos]?
     var presenter: PhotosListPresentationLogic?
     private var fetcher = NetworkDataFetcher(networking: NetworkService())
   
@@ -34,21 +35,29 @@ class PhotosListInteractor: PhotosListBusinessLogic, PhotosListDataStore {
             fetcher.getPhotos { [weak self] (response, error) in
                 if let photos = response?.hits, let self = self {
                     self.photos = photos
-                    
-                    for hit in photos {
-                        //print(getStringFromDate(foodDate: Date()))
-                        self.photos2?.append(Photos(hits: hit, date: getStringFromDate(foodDate: Date())))
-                    }
-                    
+//                    var photos3: [Photos] = []
+//                    for hit in photos {
+//                        //print(getStringFromDate(foodDate: Date()))
+//                        photos3.append(Photos(hits: hit, date: getStringFromDate(downloadDate: Date())))
+//                        //self.photos2?.append(Photos(hits: hit, date: getStringFromDate(foodDate: Date())))
+//                    }
+//
+//                    self.photos2 = photos3
                     print("connection is available")
-                    self.presenter?.presentData(response: .presentResponseData(photos: photos))
+                    self.presenter?.presentData(response: .presentResponseData(photos: self.photos!))
+                    //self.presenter?.presentData(response: .presentResponseData(photos: self.photos2!))
                 } else {
-                    //вот тут мы будем получать картинки из файлового менеджера
                     print("no connection")
                     self?.photos = SavedImages.getAll()
                     self?.presenter?.presentData(response: .presentResponseData(photos: self!.photos!))
-                    //self?.presenter?.presentData(response: .presentError(error: error!.localizedDescription))
                 }
+//                } else {
+//                    //вот тут мы будем получать картинки из файлового менеджера
+//                    print("no connection")
+//                    self?.photos = SavedImages.getAll()
+//                    self?.presenter?.presentData(response: .presentData(photos: self!.photos2))
+//                    //self?.presenter?.presentData(response: .presentError(error: error!.localizedDescription))
+                
             }
         }
     }

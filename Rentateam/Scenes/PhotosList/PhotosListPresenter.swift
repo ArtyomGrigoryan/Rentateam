@@ -31,13 +31,16 @@ class PhotosListPresenter: PhotosListPresentationLogic {
         }
     }
   
+    //private func cellViewModel(from photo: Photos) -> PhotosViewModel.Cell {
     private func cellViewModel(from photo: Hits) -> PhotosViewModel.Cell {
         let previewURL = photo.previewURL
         let likesCount = String(describing: photo.likes)
         let previewWidth = String(describing: photo.previewWidth)
         let previewHeight = String(describing: photo.previewHeight)
+        //let date = photo.date
         
-        return PhotosViewModel.Cell(previewURL: previewURL,
+        return PhotosViewModel.Cell(//date: date,
+                                    previewURL: previewURL,
                                     likesCount: likesCount,
                                     previewImageViewWidth: previewWidth,
                                     previewImageViewHeight: previewHeight)

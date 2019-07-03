@@ -8,14 +8,27 @@
 
 import Foundation
 
-func getStringFromDate(foodDate: Date) -> String {
+func getStringFromDate(downloadDate: Date) -> String {
     let formatter = DateFormatter()
     formatter.dateStyle = DateFormatter.Style.medium
     formatter.timeStyle = DateFormatter.Style.none
     formatter.dateFormat = "dd.MM.yyyy"
     formatter.timeZone = TimeZone(identifier: "GMT")
     
-    let stringFromDate = formatter.string(from: foodDate)
+    let stringFromDate = formatter.string(from: downloadDate)
     
     return stringFromDate
+}
+
+func getDateFromString(date: String) -> Date {
+    //print("in func \(date)")
+    let formatter = DateFormatter()
+    formatter.dateStyle = DateFormatter.Style.medium
+    formatter.timeStyle = DateFormatter.Style.none
+    formatter.dateFormat = "dd.MM.yyyy"
+    formatter.timeZone = TimeZone(identifier: "GMT")
+    
+    let dateFromString = formatter.date(from: date)!
+    
+    return dateFromString
 }

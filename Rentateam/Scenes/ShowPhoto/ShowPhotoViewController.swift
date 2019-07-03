@@ -56,7 +56,6 @@ class ShowPhotoViewController: UIViewController, ShowPhotoDisplayLogic {
         switch viewModel {
         case .displayPhoto(let photo):
             print(photo)
-            
             guard let url = URL(string: photo) else { return }
             
             URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in

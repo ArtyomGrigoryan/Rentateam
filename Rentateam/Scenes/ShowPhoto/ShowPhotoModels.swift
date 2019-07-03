@@ -18,7 +18,8 @@ enum ShowPhoto {
     
         struct Response {
             enum ResponseType {
-                case presentResponseData(records: Hits)
+                //case presentResponseData(photos: Photos)
+                case presentResponseData(photos: Hits)
             }
         }
     

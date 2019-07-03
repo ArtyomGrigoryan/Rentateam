@@ -13,6 +13,7 @@ protocol ShowPhotoPresentationLogic {
 }
 
 class ShowPhotoPresenter: ShowPhotoPresentationLogic {
+    
     weak var viewController: ShowPhotoDisplayLogic?
   
     func presentData(response: ShowPhoto.Model.Response.ResponseType) {

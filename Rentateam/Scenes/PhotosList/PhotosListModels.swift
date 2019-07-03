@@ -20,6 +20,7 @@ enum PhotosList {
             enum ResponseType {
                 case presentError(error: String)
                 case presentResponseData(photos: [Hits])
+                //case presentResponseData(photos: [Photos])
             }
         }
     
@@ -34,10 +35,12 @@ enum PhotosList {
 
 struct PhotosViewModel {
     struct Cell: PhotosListCellViewModel {
+        //var date: String?
         var previewURL: String
         var likesCount: String?
         var previewImageViewWidth: String?
         var previewImageViewHeight: String?
+        
     }
     
     let cells: [Cell]
