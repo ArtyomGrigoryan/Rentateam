@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20C68A3D7191B62D964BE855 /* Pods_Rentateam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027FCEEE172A208844D67E29 /* Pods_Rentateam.framework */; };
+		2B5CF7E222CB23460029A99B /* PhotosListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CF7DB22CB23460029A99B /* PhotosListPresenter.swift */; };
+		2B5CF7E422CB23460029A99B /* PhotosListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CF7DD22CB23460029A99B /* PhotosListRouter.swift */; };
+		2B5CF7E522CB23460029A99B /* PhotosListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CF7DE22CB23460029A99B /* PhotosListModels.swift */; };
+		2B5CF7E622CB23460029A99B /* PhotosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CF7DF22CB23460029A99B /* PhotosListViewController.swift */; };
+		2B5CF7E722CB23460029A99B /* PhotosListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CF7E022CB23460029A99B /* PhotosListInteractor.swift */; };
+		2B5CF7F022CB264F0029A99B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CF7EF22CB264F0029A99B /* API.swift */; };
+		2B5CF7F222CB279E0029A99B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CF7F122CB279E0029A99B /* NetworkService.swift */; };
+		2B5CF7F422CB28B90029A99B /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CF7F322CB28B90029A99B /* ServerResponse.swift */; };
+		2B5CF7F722CB2B030029A99B /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CF7F622CB2B030029A99B /* NetworkDataFetcher.swift */; };
+		2B5CF7F922CB2F3E0029A99B /* PhotosListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CF7F822CB2F3E0029A99B /* PhotosListTableViewCell.swift */; };
+		2B5CF7FC22CB5D910029A99B /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5CF7FB22CB5D910029A99B /* WebImageView.swift */; };
+		2B8A5E9722CC7698005ABAE7 /* ShowPhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A5E9022CC7698005ABAE7 /* ShowPhotoPresenter.swift */; };
+		2B8A5E9922CC7698005ABAE7 /* ShowPhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A5E9222CC7698005ABAE7 /* ShowPhotoRouter.swift */; };
+		2B8A5E9A22CC7698005ABAE7 /* ShowPhotoModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A5E9322CC7698005ABAE7 /* ShowPhotoModels.swift */; };
+		2B8A5E9B22CC7698005ABAE7 /* ShowPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A5E9422CC7698005ABAE7 /* ShowPhotoViewController.swift */; };
+		2B8A5E9C22CC7698005ABAE7 /* ShowPhotoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A5E9522CC7698005ABAE7 /* ShowPhotoInteractor.swift */; };
+		2BB1DDDA22CBDBCA00554508 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1DDD922CBDBCA00554508 /* Connectivity.swift */; };
+		2BB1DDDC22CBE23C00554508 /* SavedImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1DDDB22CBE23C00554508 /* SavedImages.swift */; };
+		2BB4D5ED22CB209E00CE57F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4D5EC22CB209E00CE57F8 /* AppDelegate.swift */; };
+		2BB4D5F222CB209E00CE57F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB4D5F022CB209E00CE57F8 /* Main.storyboard */; };
+		2BB4D5F422CB209F00CE57F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB4D5F322CB209F00CE57F8 /* Assets.xcassets */; };
+		2BB4D5F722CB209F00CE57F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB4D5F522CB209F00CE57F8 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		027FCEEE172A208844D67E29 /* Pods_Rentateam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rentateam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B5CF7DB22CB23460029A99B /* PhotosListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListPresenter.swift; sourceTree = "<group>"; };
+		2B5CF7DD22CB23460029A99B /* PhotosListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListRouter.swift; sourceTree = "<group>"; };
+		2B5CF7DE22CB23460029A99B /* PhotosListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListModels.swift; sourceTree = "<group>"; };
+		2B5CF7DF22CB23460029A99B /* PhotosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewController.swift; sourceTree = "<group>"; };
+		2B5CF7E022CB23460029A99B /* PhotosListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListInteractor.swift; sourceTree = "<group>"; };
+		2B5CF7EF22CB264F0029A99B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2B5CF7F122CB279E0029A99B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2B5CF7F322CB28B90029A99B /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		2B5CF7F622CB2B030029A99B /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		2B5CF7F822CB2F3E0029A99B /* PhotosListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListTableViewCell.swift; sourceTree = "<group>"; };
+		2B5CF7FB22CB5D910029A99B /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
+		2B8A5E9022CC7698005ABAE7 /* ShowPhotoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhotoPresenter.swift; sourceTree = "<group>"; };
+		2B8A5E9222CC7698005ABAE7 /* ShowPhotoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhotoRouter.swift; sourceTree = "<group>"; };
+		2B8A5E9322CC7698005ABAE7 /* ShowPhotoModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhotoModels.swift; sourceTree = "<group>"; };
+		2B8A5E9422CC7698005ABAE7 /* ShowPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhotoViewController.swift; sourceTree = "<group>"; };
+		2B8A5E9522CC7698005ABAE7 /* ShowPhotoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPhotoInteractor.swift; sourceTree = "<group>"; };
+		2BB1DDD922CBDBCA00554508 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		2BB1DDDB22CBE23C00554508 /* SavedImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedImages.swift; sourceTree = "<group>"; };
+		2BB4D5E922CB209E00CE57F8 /* Rentateam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rentateam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB4D5EC22CB209E00CE57F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BB4D5F122CB209E00CE57F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BB4D5F322CB209F00CE57F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BB4D5F622CB209F00CE57F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BB4D5F822CB209F00CE57F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE3850131D4FA4E47F82D06F /* Pods-Rentateam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rentateam.release.xcconfig"; path = "Target Support Files/Pods-Rentateam/Pods-Rentateam.release.xcconfig"; sourceTree = "<group>"; };
+		CEE2929C986A768113DBA88E /* Pods-Rentateam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rentateam.debug.xcconfig"; path = "Target Support Files/Pods-Rentateam/Pods-Rentateam.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BB4D5E622CB209E00CE57F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C68A3D7191B62D964BE855 /* Pods_Rentateam.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B5CF7E922CB23550029A99B /* PhotosList */ = {
+			isa = PBXGroup;
+			children = (
+				2B5CF7ED22CB239B0029A99B /* Cell */,
+				2B5CF7DF22CB23460029A99B /* PhotosListViewController.swift */,
+				2B5CF7E022CB23460029A99B /* PhotosListInteractor.swift */,
+				2B5CF7DB22CB23460029A99B /* PhotosListPresenter.swift */,
+				2B5CF7DD22CB23460029A99B /* PhotosListRouter.swift */,
+				2B5CF7DE22CB23460029A99B /* PhotosListModels.swift */,
+			);
+			path = PhotosList;
+			sourceTree = "<group>";
+		};
+		2B5CF7EA22CB236B0029A99B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2B8A5E9E22CC76B3005ABAE7 /* ShowPhoto */,
+				2B5CF7E922CB23550029A99B /* PhotosList */,
+				2BB4D5F022CB209E00CE57F8 /* Main.storyboard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2B5CF7ED22CB239B0029A99B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2B5CF7F822CB2F3E0029A99B /* PhotosListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2B5CF7EE22CB26350029A99B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2B5CF7F522CB28C00029A99B /* Models */,
+				2B5CF7EF22CB264F0029A99B /* API.swift */,
+				2BB1DDDB22CBE23C00554508 /* SavedImages.swift */,
+				2B5CF7F122CB279E0029A99B /* NetworkService.swift */,
+				2B5CF7F622CB2B030029A99B /* NetworkDataFetcher.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2B5CF7F522CB28C00029A99B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B5CF7F322CB28B90029A99B /* ServerResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B5CF7FA22CB5D7A0029A99B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2BB1DDD922CBDBCA00554508 /* Connectivity.swift */,
+				2B5CF7FB22CB5D910029A99B /* WebImageView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2B8A5E9E22CC76B3005ABAE7 /* ShowPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				2B8A5E9422CC7698005ABAE7 /* ShowPhotoViewController.swift */,
+				2B8A5E9522CC7698005ABAE7 /* ShowPhotoInteractor.swift */,
+				2B8A5E9022CC7698005ABAE7 /* ShowPhotoPresenter.swift */,
+				2B8A5E9222CC7698005ABAE7 /* ShowPhotoRouter.swift */,
+				2B8A5E9322CC7698005ABAE7 /* ShowPhotoModels.swift */,
+			);
+			path = ShowPhoto;
+			sourceTree = "<group>";
+		};
+		2BB4D5E022CB209E00CE57F8 = {
+			isa = PBXGroup;
+			children = (
+				2BB4D5EB22CB209E00CE57F8 /* Rentateam */,
+				2BB4D5EA22CB209E00CE57F8 /* Products */,
+				BC85A9F0A7B80465DC1B0502 /* Pods */,
+				7210E5DB060470100A814379 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2BB4D5EA22CB209E00CE57F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BB4D5E922CB209E00CE57F8 /* Rentateam.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BB4D5EB22CB209E00CE57F8 /* Rentateam */ = {
+			isa = PBXGroup;
+			children = (
+				2B5CF7FA22CB5D7A0029A99B /* Helpers */,
+				2B5CF7EE22CB26350029A99B /* Services */,
+				2B5CF7EA22CB236B0029A99B /* Scenes */,
+				2BB4D5EC22CB209E00CE57F8 /* AppDelegate.swift */,
+				2BB4D5F322CB209F00CE57F8 /* Assets.xcassets */,
+				2BB4D5F522CB209F00CE57F8 /* LaunchScreen.storyboard */,
+				2BB4D5F822CB209F00CE57F8 /* Info.plist */,
+			);
+			path = Rentateam;
+			sourceTree = "<group>";
+		};
+		7210E5DB060470100A814379 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				027FCEEE172A208844D67E29 /* Pods_Rentateam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC85A9F0A7B80465DC1B0502 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEE2929C986A768113DBA88E /* Pods-Rentateam.debug.xcconfig */,
+				AE3850131D4FA4E47F82D06F /* Pods-Rentateam.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BB4D5E822CB209E00CE57F8 /* Rentateam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BB4D5FB22CB209F00CE57F8 /* Build configuration list for PBXNativeTarget "Rentateam" */;
+			buildPhases = (
+				1B2BF6379264E74CC29F9FB8 /* [CP] Check Pods Manifest.lock */,
+				2BB4D5E522CB209E00CE57F8 /* Sources */,
+				2BB4D5E622CB209E00CE57F8 /* Frameworks */,
+				2BB4D5E722CB209E00CE57F8 /* Resources */,
+				B7AE4F72E8F1DCA24B81AA82 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rentateam;
+			productName = Rentateam;
+			productReference = 2BB4D5E922CB209E00CE57F8 /* Rentateam.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BB4D5E122CB209E00CE57F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Artyom Grigoryan";
+				TargetAttributes = {
+					2BB4D5E822CB209E00CE57F8 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 2BB4D5E422CB209E00CE57F8 /* Build configuration list for PBXProject "Rentateam" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BB4D5E022CB209E00CE57F8;
+			productRefGroup = 2BB4D5EA22CB209E00CE57F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BB4D5E822CB209E00CE57F8 /* Rentateam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BB4D5E722CB209E00CE57F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB4D5F722CB209F00CE57F8 /* LaunchScreen.storyboard in Resources */,
+				2BB4D5F422CB209F00CE57F8 /* Assets.xcassets in Resources */,
+				2BB4D5F222CB209E00CE57F8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B2BF6379264E74CC29F9FB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rentateam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7AE4F72E8F1DCA24B81AA82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rentateam/Pods-Rentateam-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rentateam/Pods-Rentateam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BB4D5E522CB209E00CE57F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB4D5ED22CB209E00CE57F8 /* AppDelegate.swift in Sources */,
+				2B8A5E9B22CC7698005ABAE7 /* ShowPhotoViewController.swift in Sources */,
+				2B8A5E9C22CC7698005ABAE7 /* ShowPhotoInteractor.swift in Sources */,
+				2B5CF7FC22CB5D910029A99B /* WebImageView.swift in Sources */,
+				2B5CF7E622CB23460029A99B /* PhotosListViewController.swift in Sources */,
+				2B8A5E9922CC7698005ABAE7 /* ShowPhotoRouter.swift in Sources */,
+				2B5CF7F722CB2B030029A99B /* NetworkDataFetcher.swift in Sources */,
+				2B5CF7F922CB2F3E0029A99B /* PhotosListTableViewCell.swift in Sources */,
+				2B5CF7E722CB23460029A99B /* PhotosListInteractor.swift in Sources */,
+				2B5CF7F222CB279E0029A99B /* NetworkService.swift in Sources */,
+				2B5CF7E522CB23460029A99B /* PhotosListModels.swift in Sources */,
+				2BB1DDDA22CBDBCA00554508 /* Connectivity.swift in Sources */,
+				2B8A5E9722CC7698005ABAE7 /* ShowPhotoPresenter.swift in Sources */,
+				2B5CF7E222CB23460029A99B /* PhotosListPresenter.swift in Sources */,
+				2B5CF7F022CB264F0029A99B /* API.swift in Sources */,
+				2BB1DDDC22CBE23C00554508 /* SavedImages.swift in Sources */,
+				2B5CF7E422CB23460029A99B /* PhotosListRouter.swift in Sources */,
+				2B5CF7F422CB28B90029A99B /* ServerResponse.swift in Sources */,
+				2B8A5E9A22CC7698005ABAE7 /* ShowPhotoModels.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2BB4D5F022CB209E00CE57F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BB4D5F122CB209E00CE57F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BB4D5F522CB209F00CE57F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BB4D5F622CB209F00CE57F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BB4D5F922CB209F00CE57F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BB4D5FA22CB209F00CE57F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BB4D5FC22CB209F00CE57F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEE2929C986A768113DBA88E /* Pods-Rentateam.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMVZ37K9BV;
+				INFOPLIST_FILE = Rentateam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ArtyomGrigoryan.Rentateam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BB4D5FD22CB209F00CE57F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE3850131D4FA4E47F82D06F /* Pods-Rentateam.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QMVZ37K9BV;
+				INFOPLIST_FILE = Rentateam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ArtyomGrigoryan.Rentateam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BB4D5E422CB209E00CE57F8 /* Build configuration list for PBXProject "Rentateam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BB4D5F922CB209F00CE57F8 /* Debug */,
+				2BB4D5FA22CB209F00CE57F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BB4D5FB22CB209F00CE57F8 /* Build configuration list for PBXNativeTarget "Rentateam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BB4D5FC22CB209F00CE57F8 /* Debug */,
+				2BB4D5FD22CB209F00CE57F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BB4D5E122CB209E00CE57F8 /* Project object */;
+}
