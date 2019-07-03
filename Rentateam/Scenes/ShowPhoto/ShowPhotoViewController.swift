@@ -21,7 +21,7 @@ class ShowPhotoViewController: UIViewController, ShowPhotoDisplayLogic {
 
     // MARK: - @IBOutlets
     
-    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoImageView: WebImageView!
     
     // MARK: - Object lifecycle
   
@@ -56,35 +56,39 @@ class ShowPhotoViewController: UIViewController, ShowPhotoDisplayLogic {
         switch viewModel {
         case .displayPhoto(let photo):
             print(photo)
-            guard let url1 = URL(string: photo) else { return }
-            print(url1)
             
-            URLSession.shared.dataTask(with: url1) { [weak self] (data, response, error) in
-                print("888888")
+            guard let url = URL(string: photo) else { return }
+            
+            URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
                 DispatchQueue.main.async {
                     if let self = self, let data = data {
-                        print("12121212122121")
                         self.photoImageView.image = UIImage(data: data)
                     }
                 }
             }.resume()
-//            guard let url1 = URL(string: photo) else { return }
+            
+            //photoImageView.set(imageURL: photo)
+//                        guard let url1 = URL(string: photo) else { return }
 //
-//            let name = url1.lastPathComponent
-//            let result = name.substring(from: name.index(name.startIndex, offsetBy: 0))
+//                        let name = url1.lastPathComponent
+//                        //let result = name.substring(from: name.index(name.startIndex, offsetBy: 0))
 //
-//            //поищем такой файл в нашем менеджере
-//            let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
-//            let url = NSURL(fileURLWithPath: path)
+//                        //поищем такой файл в нашем менеджере
+//                        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+//                        let url = NSURL(fileURLWithPath: path)
 //
-//            if let pathComponent = url.appendingPathComponent(result) {
-//                let filePath = pathComponent.path
-//                let fileManager = FileManager.default
+//                        if let pathComponent = url.appendingPathComponent(name) {
+//                            let filePath = pathComponent.path
+//                            let fileManager = FileManager.default
 //
-//                if fileManager.fileExists(atPath: filePath) {
-//                    photoImageView.image = UIImage(contentsOfFile: filePath)!
-//                }
-//            }
+//                            if fileManager.fileExists(atPath: filePath) {
+//                                photoImageView.image = UIImage(contentsOfFile: filePath)!
+//                            }
+//                        }
+            
+            
+            //photoImageView.set(imageURL: photo)
+
         }
     }
   
