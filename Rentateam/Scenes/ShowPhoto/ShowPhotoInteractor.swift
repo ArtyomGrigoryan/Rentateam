@@ -12,12 +12,20 @@ protocol ShowPhotoBusinessLogic {
     func makeRequest(request: ShowPhoto.Model.Request.RequestType)
 }
 
-class ShowPhotoInteractor: ShowPhotoBusinessLogic {
+protocol ShowPhotoDataStore {
+    var photo: Hits? { get set }
+}
 
+class ShowPhotoInteractor: ShowPhotoBusinessLogic, ShowPhotoDataStore {
+    
+    var photo: Hits?
     var presenter: ShowPhotoPresentationLogic?
   
     func makeRequest(request: ShowPhoto.Model.Request.RequestType) {
-
+        switch request {
+        case .getPhoto:
+            self.presenter?.presentData(response: .presentResponseData(records: self.photo!))
+        }
     }
   
 }

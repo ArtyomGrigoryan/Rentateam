@@ -12,19 +12,19 @@ enum ShowPhoto {
     enum Model {
         struct Request {
             enum RequestType {
-                case some
+                case getPhoto
             }
         }
     
         struct Response {
             enum ResponseType {
-                case some
+                case presentResponseData(records: Hits)
             }
         }
     
         struct ViewModel {
             enum ViewModelData {
-                case some
+                case displayPhoto(photoImage: String)
             }
         }
     }

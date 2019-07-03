@@ -16,7 +16,10 @@ class ShowPhotoPresenter: ShowPhotoPresentationLogic {
     weak var viewController: ShowPhotoDisplayLogic?
   
     func presentData(response: ShowPhoto.Model.Response.ResponseType) {
-  
+        switch response {
+        case .presentResponseData(let photo):
+            viewController?.displayData(viewModel: .displayPhoto(photoImage: photo.previewURL))
+        }
     }
   
 }

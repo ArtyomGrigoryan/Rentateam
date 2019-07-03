@@ -12,7 +12,11 @@ protocol PhotosListBusinessLogic {
     func makeRequest(request: PhotosList.Model.Request.RequestType)
 }
 
-class PhotosListInteractor: PhotosListBusinessLogic {
+protocol PhotosListDataStore {
+    var photos: [Hits]? { get }
+}
+
+class PhotosListInteractor: PhotosListBusinessLogic, PhotosListDataStore {
 
     var photos: [Hits]?
     var presenter: PhotosListPresentationLogic?
@@ -22,13 +26,16 @@ class PhotosListInteractor: PhotosListBusinessLogic {
         switch request {
         case .getPhotos:
             fetcher.getPhotos { [weak self] (response, error) in
+                print("84378378375873847 587 8574 \(error)")
                 if let photos = response?.hits {
+                    self?.photos = photos
                     print("connection is available")
                     self?.presenter?.presentData(response: .presentResponseData(photos: photos))
                 } else {
                     //вот тут мы будем получать картинки из файлового менеджера
                     print("no connection")
-                    self?.presenter?.presentData(response: .presentResponseData(photos: SavedImages.getAll()))
+                    self?.photos = SavedImages.getAll()
+                    self?.presenter?.presentData(response: .presentResponseData(photos: self!.photos!))
                     //self?.presenter?.presentData(response: .presentError(error: error!.localizedDescription))
                 }
             }

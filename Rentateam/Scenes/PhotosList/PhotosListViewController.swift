@@ -17,7 +17,7 @@ class PhotosListViewController: UITableViewController, PhotosListDisplayLogic {
     // MARK: - Public variables
     
     var interactor: PhotosListBusinessLogic?
-    var router: (NSObjectProtocol & PhotosListRoutingLogic)?
+    var router: (NSObjectProtocol & PhotosListRoutingLogic & PhotosListDataPassing)?
     
     // MARK: - Private variables
     
@@ -42,6 +42,7 @@ class PhotosListViewController: UITableViewController, PhotosListDisplayLogic {
         interactor.presenter      = presenter
         presenter.viewController  = viewController
         router.viewController     = viewController
+        router.dataStore          = interactor
     }
   
     // MARK: - Routing

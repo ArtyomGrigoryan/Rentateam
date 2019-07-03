@@ -10,6 +10,7 @@ import UIKit
 
 class WebImageView: UIImageView {
     func set(imageURL: String) {
+        print(imageURL)
         guard let url = URL(string: imageURL) else { return }
 
         //реализуем функционал загрузки изображения из интернета

@@ -17,7 +17,7 @@ class ShowPhotoViewController: UIViewController, ShowPhotoDisplayLogic {
     // MARK: - Public variables
 
     var interactor: ShowPhotoBusinessLogic?
-    var router: (NSObjectProtocol & ShowPhotoRoutingLogic)?
+    var router: (NSObjectProtocol & ShowPhotoRoutingLogic & ShowPhotoDataPassing)?
 
     // MARK: - @IBOutlets
     
@@ -42,6 +42,7 @@ class ShowPhotoViewController: UIViewController, ShowPhotoDisplayLogic {
         interactor.presenter      = presenter
         presenter.viewController  = viewController
         router.viewController     = viewController
+        router.dataStore          = interactor
     }
   
     // MARK: - Routing
@@ -52,10 +53,20 @@ class ShowPhotoViewController: UIViewController, ShowPhotoDisplayLogic {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        interactor?.makeRequest(request: .getPhoto)
     }
   
     func displayData(viewModel: ShowPhoto.Model.ViewModel.ViewModelData) {
-
+        switch viewModel {
+        case .displayPhoto(let photo):
+            print(photo)
+            let name = photo + ".jpg"
+            print(name)
+            //let path = URL.u
+            photoImageView.image = UIImage(named: name)
+            //photoImageView.image = UIImage(contentsOfFile: photo)
+            print(photoImageView.image)
+        }
     }
   
 }

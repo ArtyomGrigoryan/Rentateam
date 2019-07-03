@@ -8,14 +8,29 @@
 
 import UIKit
 
-protocol PhotosListRoutingLogic {
-
+@objc protocol PhotosListRoutingLogic {
+    func routeToShowPhoto(segue: UIStoryboardSegue)
 }
 
-class PhotosListRouter: NSObject, PhotosListRoutingLogic {
+protocol PhotosListDataPassing {
+    var dataStore: PhotosListDataStore? { get }
+}
 
+class PhotosListRouter: NSObject, PhotosListRoutingLogic, PhotosListDataPassing {
+    
+    var dataStore: PhotosListDataStore?
     weak var viewController: PhotosListViewController?
   
     // MARK: - Routing
   
+    func routeToShowPhoto(segue: UIStoryboardSegue) {
+        let dvc = segue.destination as! ShowPhotoViewController
+        var destinationDS = dvc.router!.dataStore!
+        passDataToShowPhoto(source: dataStore!, destination: &destinationDS)
+    }
+    
+    func passDataToShowPhoto(source: PhotosListDataStore, destination: inout ShowPhotoDataStore) {
+        let selectedRow = viewController?.tableView.indexPathForSelectedRow?.row
+        destination.photo = source.photos![selectedRow!]
+    }
 }

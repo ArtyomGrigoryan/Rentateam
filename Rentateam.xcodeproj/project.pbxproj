@@ -81,8 +81,8 @@
 				2B5CF7DF22CB23460029A99B /* PhotosListViewController.swift */,
 				2B5CF7E022CB23460029A99B /* PhotosListInteractor.swift */,
 				2B5CF7DB22CB23460029A99B /* PhotosListPresenter.swift */,
-				2B5CF7DD22CB23460029A99B /* PhotosListRouter.swift */,
 				2B5CF7DE22CB23460029A99B /* PhotosListModels.swift */,
+				2B5CF7DD22CB23460029A99B /* PhotosListRouter.swift */,
 			);
 			path = PhotosList;
 			sourceTree = "<group>";
