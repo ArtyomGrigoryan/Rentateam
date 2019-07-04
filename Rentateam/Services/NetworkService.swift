@@ -13,6 +13,11 @@ protocol Networking {
     func request(completion: @escaping ([String : Any]?, Error?) -> Void)
 }
 
+/*
+ * Alamofire был выбран из-за того, что код для работы с сетью уже был реализован мною в другом проекте (с использованием Alamofire),
+ * и из-за ограниченного времени на выполнение тестового задания мною было принято решение просто скопировать код для экономии времени
+ */
+
 class NetworkService: Networking {
     func request(completion: @escaping ([String : Any]?, Error?) -> Void) {
         if Connectivity.isConnectedToInternet {
