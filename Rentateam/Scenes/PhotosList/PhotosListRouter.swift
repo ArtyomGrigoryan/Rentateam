@@ -18,6 +18,8 @@ protocol PhotosListDataPassing {
 
 class PhotosListRouter: NSObject, PhotosListRoutingLogic, PhotosListDataPassing {
     
+    // MARK: - Public variables
+    
     var dataStore: PhotosListDataStore?
     weak var viewController: PhotosListViewController?
   

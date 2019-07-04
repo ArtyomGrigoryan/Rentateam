@@ -27,5 +27,4 @@ class ShowPhotoInteractor: ShowPhotoBusinessLogic, ShowPhotoDataStore {
             self.presenter?.presentData(response: .presentResponseData(photos: self.photo!))
         }
     }
-  
 }

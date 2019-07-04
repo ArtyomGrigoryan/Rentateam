@@ -18,9 +18,9 @@ protocol ShowPhotoDataPassing {
 
 class ShowPhotoRouter: NSObject, ShowPhotoRoutingLogic, ShowPhotoDataPassing {
     
+    // MARK: - Public variables
+    
     var dataStore: ShowPhotoDataStore?
     weak var viewController: ShowPhotoViewController?
-  
-    // MARK: - Routing
-  
+    
 }

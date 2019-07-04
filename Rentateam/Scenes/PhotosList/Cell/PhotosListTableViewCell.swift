@@ -27,10 +27,13 @@ class PhotosListTableViewCell: UITableViewCell {
     }
     
     func set(viewModel: PhotosListCellViewModel) {
+        previewImageViewWidthLabel.text = viewModel.previewImageViewWidth!
+        previewImageViewHeightLabel.text = viewModel.previewImageViewHeight!
+        /*
+         * Не думаю, что это в лучших традициях Clean Swift
+         */
         previewImageImageView.set(imageURL: viewModel.previewURL) { [weak self] (date) in
             self?.likesCountLabel.text = date!
         }
-        previewImageViewWidthLabel.text = viewModel.previewImageViewWidth!
-        previewImageViewHeightLabel.text = viewModel.previewImageViewHeight!
     }
 }

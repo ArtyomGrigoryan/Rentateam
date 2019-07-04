@@ -27,7 +27,7 @@ class PhotosListPresenter: PhotosListPresentationLogic {
             
             viewController?.displayData(viewModel: .displayPhotos(photosViewModel: photosViewModel))
         case .presentError(let error):
-            viewController?.displayData(viewModel: .displayError(error: error))
+            viewController?.displayData(viewModel: .displayError(error: error.localizedDescription))
         }
     }
   

@@ -9,30 +9,35 @@
 import UIKit
 
 class WebImageView: UIImageView {
+    //completion вернет дату загрузки изображения в строковом формате
     func set(imageURL: String, completion: @escaping (String?) -> Void) {
         guard let url = URL(string: imageURL) else { return completion(nil) }
         
         URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
             DispatchQueue.main.async {
-                if let self = self, let data = data {
-                    let name = url.lastPathComponent
-                    
-                    //поищем такой файл в хранилище
+                if let data = data, let self = self {
+                    print("url \(url)")
+                    //вырежем из url всё, что находится до названия файла с его расширением (останется только, например, fiat-4298163_150.jpg)
+                    let imageName = url.lastPathComponent
+                
+                    //начнем искать такой файл в файловой системе iPhone
                     let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
                     let url1 = NSURL(fileURLWithPath: path)
+                    print("url1 is \(url1)")
                         
-                    if let pathComponent = url1.appendingPathComponent(name) {
+                    if let pathComponent = url1.appendingPathComponent(imageName) {
+                        print("pathComponent is \(pathComponent)")
                         let fileManager = FileManager.default
                         let filePath = pathComponent.path
                         
+                        //если такое изображение отсутствует в файловой системе iPhone, то
                         if !fileManager.fileExists(atPath: filePath) {
-                            //сохраним изображение в файловом менеджере
                             guard let directory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
                                 else { return }
                             
+                            //попытаемся сохранить это изображение в файловой системе, чтобы потом иметь возможность получить его без интернет-соединения
                             do {
-                                try data.write(to: directory.appendingPathComponent(name))
-                                print("Saved successful")
+                                try data.write(to: directory.appendingPathComponent(imageName))
                             } catch {
                                 print(error.localizedDescription)
                             }
@@ -41,40 +46,27 @@ class WebImageView: UIImageView {
                     
                     self.image = UIImage(data: data)
                     
-                    if let httpResponse = response as? HTTPURLResponse, let date = httpResponse.allHeaderFields["Date"] as? String {
-                        print("AAAAAAAAAA")
-                        let dateFormatter = DateFormatter()
-                        dateFormatter.dateFormat = "EEEE, dd LLL yyyy HH:mm:ss zzz"
-                        let serverDate = dateFormatter.date(from: date)
+                    //если есть подключение к интернету, то будем получать дату загрузки изображения с сервера из HTTPURLResponse
+                    if let httpResponse = response as? HTTPURLResponse, let stringDate = httpResponse.allHeaderFields["Date"] as? String {
+                        let formattedDate = getDateFromString(date: stringDate)
+                        let formattedStringDate = getStringFromDate(downloadDate: formattedDate)
                         
-                        dateFormatter.locale = Locale(identifier: "ru_RU")
-                        dateFormatter.dateFormat = "dd.MM.yy HH:mm:ss"
-                        let stringDate = dateFormatter.string(from: serverDate!)
-                        
-                        print(stringDate)
-                        
-                        completion(stringDate)
+                        completion(formattedStringDate)
                     } else {
-                        print("BBBBBBBB")
-                        //тут буем дергать из нашего файлового менеджера
-                        if let pathComponent = url1.appendingPathComponent(name) {
+                        //если подключение к интернету отсутствует, то
+                        if let pathComponent = url1.appendingPathComponent(imageName) {
                             let fileManager = FileManager.default
                             let filePath = pathComponent.path
                             
+                            //получим дату загрузки файла (находящегося в файловой системе) из его аттрибутов
                             if fileManager.fileExists(atPath: filePath) {
-                                print("Nashli")
+                                let attributes: Dictionary? = try? fileManager.attributesOfItem(atPath: filePath)
+                                let createdAt = attributes![FileAttributeKey.creationDate] as! Date
+                                let stringDate = getStringFromDate(downloadDate: createdAt)
                                 
-                                let attrFile: Dictionary? = try? fileManager.attributesOfItem(atPath: filePath)
-                                let createdAt = attrFile![FileAttributeKey.creationDate] as! Date
-                                
-                                let dateFormatter = DateFormatter()
-                                dateFormatter.locale = Locale(identifier: "ru_RU")
-                                dateFormatter.dateFormat = "dd.MM.yy HH:mm:ss"
-                                let stringDate2 = dateFormatter.string(from: createdAt)
-                                
-                                print(stringDate2)
-                                
-                                completion(stringDate2)
+                                completion(stringDate)
+                            } else {
+                                completion(nil)
                             }
                         }
                     }

@@ -29,6 +29,7 @@ class NetworkService: Networking {
                 }
             }
         } else {
+            //если интернет-соединение отсутствует
             completion(nil, nil)
         }
     }

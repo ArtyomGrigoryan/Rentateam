@@ -8,27 +8,20 @@
 
 import Foundation
 
+func getDateFromString(date: String) -> Date {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "EEEE, dd LLL yyyy HH:mm:ss zzz"
+    let formattedDate = formatter.date(from: date)!
+    
+    return formattedDate
+}
+
 func getStringFromDate(downloadDate: Date) -> String {
     let formatter = DateFormatter()
-    formatter.dateStyle = DateFormatter.Style.medium
-    formatter.timeStyle = DateFormatter.Style.none
-    formatter.dateFormat = "dd.MM.yyyy"
-    formatter.timeZone = TimeZone(identifier: "GMT")
+    formatter.locale = Locale(identifier: "ru_RU")
+    formatter.dateFormat = "dd.MM.yy HH:mm:ss"
     
     let stringFromDate = formatter.string(from: downloadDate)
     
     return stringFromDate
-}
-
-func getDateFromString(date: String) -> Date {
-    //print("in func \(date)")
-    let formatter = DateFormatter()
-    formatter.dateStyle = DateFormatter.Style.medium
-    formatter.timeStyle = DateFormatter.Style.none
-    formatter.dateFormat = "dd.MM.yyyy"
-    formatter.timeZone = TimeZone(identifier: "GMT")
-    
-    let dateFromString = formatter.date(from: date)!
-    
-    return dateFromString
 }

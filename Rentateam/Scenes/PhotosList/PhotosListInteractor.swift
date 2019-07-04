@@ -30,7 +30,7 @@ class PhotosListInteractor: PhotosListBusinessLogic, PhotosListDataStore {
                     self.photos = photos
                     self.presenter?.presentData(response: .presentResponseData(photos: self.photos!))
                 } else if let error = error {
-                    self?.presenter?.presentData(response: .presentError(error: error.localizedDescription))
+                    self?.presenter?.presentData(response: .presentError(error: error))
                 } else {
                     self?.photos = SavedImages.getAll()
                     self?.presenter?.presentData(response: .presentResponseData(photos: self!.photos!))

@@ -18,7 +18,7 @@ enum PhotosList {
     
         struct Response {
             enum ResponseType {
-                case presentError(error: String)
+                case presentError(error: Error)
                 case presentResponseData(photos: [Hits])
             }
         }
