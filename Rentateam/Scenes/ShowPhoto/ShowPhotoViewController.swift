@@ -56,6 +56,7 @@ class ShowPhotoViewController: UIViewController, ShowPhotoDisplayLogic {
     func displayData(viewModel: ShowPhoto.Model.ViewModel.ViewModelData) {
         switch viewModel {
         case .displayPhoto(let photo):
+            /* В файле PhotosListTableViewCell.swift я высказался по поводу этого способа получения даты загрузки */
             photoImageView.set(imageURL: photo) { [weak self] (date) in
                 self?.downloadDate.text = date!
             }

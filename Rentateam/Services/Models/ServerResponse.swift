@@ -15,7 +15,6 @@ struct ServerResponse: Decodable {
 }
 
 struct Hits: Decodable  {
-    let likes: Int
     let previewWidth: Int
     let previewHeight: Int
     let previewURL: String

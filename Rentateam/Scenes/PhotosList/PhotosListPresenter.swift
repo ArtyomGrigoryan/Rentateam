@@ -33,12 +33,10 @@ class PhotosListPresenter: PhotosListPresentationLogic {
   
     private func cellViewModel(from photo: Hits) -> PhotosViewModel.Cell {
         let previewURL = photo.previewURL
-        let likesCount = String(describing: photo.likes)
         let previewWidth = String(describing: photo.previewWidth)
         let previewHeight = String(describing: photo.previewHeight)
         
         return PhotosViewModel.Cell(previewURL: previewURL,
-                                    likesCount: likesCount,
                                     previewImageViewWidth: previewWidth,
                                     previewImageViewHeight: previewHeight)
     }

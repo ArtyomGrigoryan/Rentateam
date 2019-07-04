@@ -35,7 +35,6 @@ enum PhotosList {
 struct PhotosViewModel {
     struct Cell: PhotosListCellViewModel {
         var previewURL: String
-        var likesCount: String?
         var previewImageViewWidth: String?
         var previewImageViewHeight: String?
     }

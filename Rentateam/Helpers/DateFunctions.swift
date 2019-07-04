@@ -11,6 +11,7 @@ import Foundation
 func getDateFromString(date: String) -> Date {
     let formatter = DateFormatter()
     formatter.dateFormat = "EEEE, dd LLL yyyy HH:mm:ss zzz"
+    
     let formattedDate = formatter.date(from: date)!
     
     return formattedDate

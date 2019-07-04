@@ -22,5 +22,4 @@ class ShowPhotoPresenter: ShowPhotoPresentationLogic {
             viewController?.displayData(viewModel: .displayPhoto(photoImage: photo.previewURL))
         }
     }
-  
 }

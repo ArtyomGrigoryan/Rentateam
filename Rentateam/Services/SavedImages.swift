@@ -21,7 +21,7 @@ class SavedImages {
         var hits: [Hits] = []
         
         for url in contents {
-            hits.append(Hits(likes: 0, previewWidth: 0, previewHeight: 0, previewURL: url.absoluteString))
+            hits.append(Hits(previewWidth: 0, previewHeight: 0, previewURL: url.absoluteString))
         }
         
         return hits

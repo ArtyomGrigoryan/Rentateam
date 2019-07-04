@@ -104,7 +104,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="likesCountLabel" destination="iLn-5U-7oC" id="4IW-CO-VHN"/>
+                                    <outlet property="downloadDateLabel" destination="iLn-5U-7oC" id="axX-Ix-r2K"/>
                                     <outlet property="previewImageImageView" destination="q72-6h-4a5" id="oQg-K5-frO"/>
                                     <outlet property="previewImageViewHeightLabel" destination="2Ic-Vm-hu1" id="2lV-0g-E7b"/>
                                     <outlet property="previewImageViewWidthLabel" destination="BPm-DC-WM1" id="AfL-Sy-Lmz"/>
